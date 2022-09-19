@@ -1,0 +1,7 @@
+{
+    "DataBase": [
+        { "title": "user1", "id": 1, "details": "shlomy" },
+        { "title": "user2", "id": 2, "details": "yusef" },
+        { "title": "user3", "id": 3, "details": "ruty" }
+    ]
+}

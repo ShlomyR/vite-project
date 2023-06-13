@@ -162,10 +162,8 @@
 </template>
 
 <script lang="ts">
-import { analyze } from "eslint-scope";
-import { link } from "fs";
-import { computed, defineComponent } from "vue";
-import { onMounted, ref, reactive } from "vue";
+import { defineComponent } from "vue";
+import {  ref } from "vue";
 import { useRouter } from "vue-router";
 import {
   getAuth,
@@ -175,13 +173,11 @@ import {
   FacebookAuthProvider,
   TwitterAuthProvider,
   signInWithPopup,
-  onAuthStateChanged,
 } from "firebase/auth";
 import AxiosManager from "../plugins/AxiosManeger";
 import {
   collection,
   query,
-  where,
   orderBy,
   onSnapshot,
   addDoc,
@@ -273,7 +269,7 @@ export default defineComponent({
         users.push(doc.data().password);
         users.push(doc.data().time);
       });
-      console.log("Current cities in CA: ", users.join(",\n"));
+      console.log("Current users in firebase: ", users.join(",\n"));
     });
     
     const login = (userName: string, password: string) => {

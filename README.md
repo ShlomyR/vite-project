@@ -1,16 +1,81 @@
-# Vue 3 + TypeScript + Vite
+# Sign-in Project
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This project is a sign-in application built with Vue.js, Vuetify 3, Express, TypeScript, and Firebase Cloud Firestore.
 
-## Recommended IDE Setup
+## Features
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+- User registration and authentication
+- Secure password storage using Firebase Authentication
+- User data storage and retrieval using Firebase Cloud Firestore
+- Responsive design with Vuetify 3 components
 
-## Type Support For `.vue` Imports in TS
+## Prerequisites
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's Take Over mode by following these steps:
+Before running the project, make sure you have the following installed:
 
-1. Run `Extensions: Show Built-in Extensions` from VS Code's command palette, look for `TypeScript and JavaScript Language Features`, then right click and select `Disable (Workspace)`. By default, Take Over mode will enable itself if the default TypeScript extension is disabled.
-2. Reload the VS Code window by running `Developer: Reload Window` from the command palette.
+- Node.js and npm (Node Package Manager)
+- Firebase account and project setup
 
-You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
+## Getting Started
+
+### Installation
+
+1. Clone the repository:
+
+   ```shell
+   git clone https://github.com/your-username/sign-in-project.git
+
+2. Change to the project directory:
+
+cd sign-in-project
+
+3. Install the dependencies:
+
+npm install
+
+### Configuration
+
+1. Create a Firebase project and enable Firebase Authentication and Cloud Firestore.
+
+2. Copy the Firebase configuration object from the Firebase project settings.
+
+3. Create a .env file in the root of the project and add the Firebase configuration:
+
+VUE_APP_FIREBASE_API_KEY=your-api-key
+VUE_APP_FIREBASE_AUTH_DOMAIN=your-auth-domain
+VUE_APP_FIREBASE_PROJECT_ID=your-project-id
+VUE_APP_FIREBASE_STORAGE_BUCKET=your-storage-bucket
+VUE_APP_FIREBASE_MESSAGING_SENDER_ID=your-messaging-sender-id
+VUE_APP_FIREBASE_APP_ID=your-app-id
+
+### Development
+
+To run the application in development mode, use the following command:
+
+npm run dev
+
+The application will be available at http://localhost:5173.
+
+### Building for Production
+
+To build the application for production, use the following command:
+
+npm run build
+
+The compiled files will be generated in the dist directory.
+
+### Deployment
+
+You can deploy the application to your preferred hosting platform or use Firebase Hosting for a quick deployment. Refer to the documentation of your hosting provider for more details on deployment.
+
+### Contributing
+
+Contributions are welcome! If you find any issues or want to enhance the project, feel free to submit a pull request.
+
+### License
+
+This project is licensed under the [MIT License](LICENSE).
+
+Feel free to modify and customize this `README.md` template according to your specific project requirements.
+
+Happy Coding!

@@ -1,45 +1,48 @@
 <template>
-  <v-app>
+  <v-app >
     <v-main>
-      <HelloWorld />
+      <router-view />
     </v-main>
   </v-app>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import HelloWorld from './components/test_Sign.vue'
+  import { defineComponent, ref } from "vue";
+  import { useRouter } from "vue-router";
+  
+  export default defineComponent({
+  name: "App",
+
+  components: {},
+
+  setup() {
+    const router = useRouter();
+    const drawer = ref<boolean>(false);
+    const lists: Array<any> = [
+      { icon: "mdi-view-dashboard", text: "Dashboard", route: "home" },
+      { icon: "mdi-folder", text: "My Projects", route: "projects" },
+      { icon: "mdi-account-circle-outline", text: "Team", route: "team" },
+      { icon: "mdi-account-circle-outline", text: "Users", route: "users" },
+    ];
+
+    const goto = (name: string) => {
+      router.push({
+        name,
+      });
+    };
 
 
-//import Input from './components/Input.vue'
 
-export default defineComponent({
-  name: 'App',
-
-  components: {
-    HelloWorld,
-    //Input,
-  },
-
-  data () {
     return {
-     
-    }
+      goto,
+      drawer,
+      lists,
+    };
   },
-  methods: {
-    
-  }
-})
+  methods: {},
+});
 </script>
 
 <style>
-  /* #app {
-      font-family: Avenir, Helvetica, Arial, sans-serif;
-      -webkit-font-smoothing: antialiased ;
-      -moz-osx-font-smoothing: grayscale;
-      text-align: center;
-      color: #2c3e50;
-      margin-top: 60px;
-  } */
-</style>
 
+</style>

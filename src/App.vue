@@ -17,6 +17,13 @@
 
   setup() {
     const router = useRouter();
+    // const envVariable = ref(process.env.VUE_APP_FIREBASE_API_KEY);
+
+    // // You can access process.env variables directly
+    // console.log(process.env.VUE_APP_FIREBASE_API_KEY);
+
+    // // Use the imported process object
+    // console.log(process);
     const drawer = ref<boolean>(false);
     const lists: Array<any> = [
       { icon: "mdi-view-dashboard", text: "Dashboard", route: "home" },
@@ -37,6 +44,7 @@
       goto,
       drawer,
       lists,
+      // envVariable,
     };
   },
   methods: {},

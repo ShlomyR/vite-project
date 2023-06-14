@@ -186,6 +186,7 @@ import {
 } from "firebase/firestore";
 import db from "../main";
 
+
 export default defineComponent({
   name: "HelloWorld",
   
@@ -261,6 +262,8 @@ export default defineComponent({
         }
       });
     });
+    // console.log("process.env.VUE_APP_FIREBASE_API_KEY: ")
+    // console.log(process.env.VUE_APP_FIREBASE_API_KEY)
     
     const unsubscribe1 = onSnapshot(q, (querySnapshot) => {
       const users: any = [];

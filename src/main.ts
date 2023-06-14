@@ -8,13 +8,14 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 //import { getAnalytics } from "firebase/analytics";
 
+
 const firebaseConfig = {
-  apiKey: "AIzaSyA4v3NARN4bIE-j9txDwa9CEnU2fWs41vI",
-  authDomain: "vue-aut0-test.firebaseapp.com",
-  projectId: "vue-aut0-test",
-  storageBucket: "vue-aut0-test.appspot.com",
-  messagingSenderId: "903249571629",
-  appId: "1:903249571629:web:243fd83c561f51b0122da4",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
   measurementId: "G-C4TW73MH0M"
 };
 
